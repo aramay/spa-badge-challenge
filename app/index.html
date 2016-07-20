@@ -16,18 +16,30 @@
     </div>
     <h1> SF Teachers </h1>
 
-      <div>
+    <ul id="teacher-content">
+      <li><a href="sample-page.html">Sample Page (to see what the badges view should look like)</a></li>
+
+      <li><a href="#">Walker</a></li>
+      <li><a href="#">Hunter</a></li>
+    </ul>
+
+      <!-- <div>
       <script id='teacher-content' type='text/x-handlebars-template'>
           My name is {{name}}. I am a {{occupation}}.
           <ul>
-            <!-- <li><a href="sample-page.html">Sample Page (to see what the badges view should look like)</a></li> -->
+            <li><a href="sample-page.html">Sample Page (to see what the badges view should look like)</a></li>
 
             <li><a href="#">Walker</a></li>
             <li><a href="#">Hunter</a></li>
           </ul>
       </script>
-    </div>
+    </div> -->
 
   </div>
+    <script id="teacher-template" type= type="text/x-handlebars-template">
+      {{#each teachers}}
+      <li><a href="#{{name}}">{{name}}</a></li>
+      {{/each}}
+    </script>
 </body>
 </html>

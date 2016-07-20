@@ -25,12 +25,15 @@ $(function(){
         console.log(teachers)
 
         //handle bar call
-        var template = $('#teacher-content').html();
-        var templateScript = Handlebars.compile(template);
+        var source = $('#teacher-template').html();
+        var template = Handlebars.compile(source);
         // var info = {name: 'Red', occupation: 'Pokemon Master'};
         var info = {name: teachers[0].name };
-        var html = templateScript(info);
-        $('#teacher-content').append(html);
+        // var info = {teacher: teachers };
+        // var html = template(info);
+        var html = template({teachers: teachers });
+        $('#teacher-content').html(html);
+
 
         for(i=0;i<teachers.length;i++){
           console.log(teachers[i].name)
